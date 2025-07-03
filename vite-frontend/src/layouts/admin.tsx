@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from "@heroui/button";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@heroui/dropdown";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@heroui/modal";
@@ -259,8 +259,8 @@ export default function AdminLayout({
            <div className="flex items-center gap-3">
              <Logo size={28} />
              <div>
-               <h1 className="text-base font-bold text-foreground">GOST 管理后台</h1>
-               <p className="text-xs text-default-500">v1.0.2</p>
+               <h1 className="text-base font-bold text-foreground">哆啦A梦</h1>
+               <p className="text-xs text-default-500">v1.0.3</p>
              </div>
            </div>
          </div>

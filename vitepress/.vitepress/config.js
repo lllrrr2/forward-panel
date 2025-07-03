@@ -9,7 +9,6 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '快速开始', link: '/getting-started' },
       { text: '使用指南', link: '/guide' },
-      { text: '项目结构', link: '/project-structure' },
       { text: '常见问题', link: '/faq' }
     ],
 

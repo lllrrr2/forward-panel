@@ -22,7 +22,7 @@
 我们提供了交互式安装脚本，会自动检测系统环境并引导您完成配置：
 
 ```bash
-curl -L https://file.tes.cc/bqlpfy/forward-panel/refs/heads/main/panel_install.sh -o panel_install.sh && chmod +x panel_install.sh && ./panel_install.sh
+curl -L https://raw.githubusercontent.com/bqlpfy/forward-panel/refs/heads/main/panel_install.sh -o panel_install.sh && chmod +x panel_install.sh && ./panel_install.sh
 ```
 
 ### 安装流程说明
@@ -57,50 +57,6 @@ curl -L https://file.tes.cc/bqlpfy/forward-panel/refs/heads/main/panel_install.s
 当前面板服务器地址: 192.168.1.100  # 或您的公网IP
 前端端口（默认 6366）: 6366         # 直接回车使用默认值
 后端端口（默认 6365）: 6365         # 直接回车使用默认值
-```
-
-## 手动安装
-
-如果需要更多控制，可以手动执行以下步骤：
-
-### 1. 下载项目文件
-
-```bash
-# 下载 docker-compose 配置（IPv4）
-curl -L -o docker-compose.yml https://file.tes.cc/bqlpfy/forward-panel/refs/heads/main/docker-compose-v4.yml
-
-# 或下载 IPv6 配置
-curl -L -o docker-compose.yml https://file.tes.cc/bqlpfy/forward-panel/refs/heads/main/docker-compose-v6.yml
-
-# 下载数据库初始化文件
-curl -L -o gost.sql https://file.tes.cc/bqlpfy/forward-panel/refs/heads/main/gost.sql
-```
-
-### 2. 创建环境配置
-
-创建 `.env` 文件并设置配置参数：
-
-```bash
-cat > .env <<EOF
-DB_NAME=your_random_db_name
-DB_USER=your_random_user
-DB_PASSWORD=your_random_password
-JWT_SECRET=your_random_jwt_secret
-SERVER_HOST=192.168.1.100:6365
-FRONTEND_PORT=6366
-BACKEND_PORT=6365
-EOF
-```
-
-### 3. 启动服务
-
-```bash
-# 检查 Docker 命令
-if command -v docker-compose &> /dev/null; then
-    docker-compose up -d
-else
-    docker compose up -d
-fi
 ```
 
 ## 验证安装
